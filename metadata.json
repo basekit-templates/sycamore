@@ -3,8 +3,6 @@
     "thumbnail":"liftmodule.png",
     "screenshot":"liftmodule.png",
     "pageTypes":["home"],
-    "defaultColorSwatch":"Dud 2",
-    "defaultFontSwatch":"Lato",
     "colorSwatches":
     {
         "Swatch 1": {
@@ -125,6 +123,11 @@
             "font-weight": "400",
             "line-height": "26px",
             "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        }
+    }
+}
+atch1",
             "letter-spacing": "inherit"
         }
     }
