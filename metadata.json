@@ -1,8 +1,7 @@
 {
-    "name":"Lift Module",
+    "name":"Sycamore",
     "thumbnail":"liftmodule.png",
     "screenshot":"liftmodule.png",
-    "pageTypes":["home"],
     "colorSwatches":
     {
         "Swatch 1": {
@@ -124,6 +123,10 @@
             "line-height": "26px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
+        }
+    }
+}
+ "inherit"
         }
     }
 }
