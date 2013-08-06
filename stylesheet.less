@@ -525,12 +525,38 @@ footer span {
 }
 
 /* ===============================
-   CLICK TO CALL - DOESN'T SHOW IN DESKTOP
+   CLICK TO CALL
    =============================== */
 
-  .widget.clicktocall {
-     display:none;
-   }
+.widget.clicktocall {
+   padding: 14px 0; 
+}
+
+.widget.clicktocall a {
+  padding: 12px 10px 12px 32px;
+  margin: 0;
+  border: none;
+  background-image: image('/images/twitter.png');
+  background-repeat: no-repeat;
+  background-position: 10px;
+
+  font-family: @font-swatch2-font-family;
+  font-size:.9em;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @color-swatch3;
+  color: @color-swatch1;
+  text-decoration: none;
+}
+
+.widget.clicktocall a:hover, .tweet a:active {
+  padding: 8px 10px 8px 32px;
+  background-image: image('/images/twitter.png');
+  background-repeat: no-repeat;
+  background-position: 10px;
+  cursor: pointer;
+  background-color: darken(@color-swatch3,10%);
+  cursor: pointer;
+}
 
 /* ===============================
    BUTTON CSS
@@ -987,6 +1013,135 @@ hr.line.align-right {
 .widget.twitter .twitter-content span.bk-full-name {
     font-family: @font-swatch4-font-family;
     color: @color-swatch3;
+}
+
+
+/* ===============================
+   SIGN UP
+   =============================== */
+
+
+.widget.signupform form {
+    display: block;
+    margin: 0 0 20px;
+    background-color: @color-swatch1;
+}
+
+.widget.signupform fieldset {
+    border: none;
+    padding: 0;
+}
+
+.widget.signupform fieldset label {
+    width: 100%;
+    float: left;
+    font-family:@font-swatch4-font-family;
+    font-size:font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@color-swatch3;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+.widget.signupform fieldset input {
+    height: 50px;
+    width: 35%;
+    background-color: darken(@color-swatch1,5%);
+    border: 1px solid darken(@color-swatch1,10%);
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 12px;
+    margin-top: 6px;
+    margin-bottom: 30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.widget.signupform fieldset textarea {
+    height: 132px;
+    width: 100%;
+    background-color: darken(@color-swatch1,5%);
+    border: 1px solid darken(@color-swatch1,10%);
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 8px;
+    padding-top: 14px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    resize: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.widget.signupform fieldset input:focus, .widget.signupform fieldset textarea:focus {
+  outline: none;
+}
+
+/* PLACEHOLDER CSS */
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    @color-swatch5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:   @color-swatch5;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    @color-swatch5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    @color-swatch5;
+}
+
+.widget.signupform fieldset button.btn {
+  padding: 17px 56px;
+  border: 0;
+  font-family: @font-swatch2-font-family;
+  font-size: .9em;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @color-swatch3;
+  color: @color-swatch1;
+  text-decoration: none;
+}
+  
+.widget.signupform fieldset button.btn:hover {
+  background-color: darken(@color-swatch3,10%);
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.widget.signupform fieldset button.btn.justifyleft
+{
+    text-align: left;
+}
+
+.widget.signupform fieldset button.btn.justifycenter
+{
+    text-align: center;
+}
+
+.widget.signupform fieldset button.btn.justifyright
+{
+    text-align: right;
+}
+
+.widget.signupform fieldset button.btn.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.signupform fieldset button.btn.italic {
+    font-style: italic;
+}
+
+.widget.signupform fieldset button.btn.bold {
+    font-weight: bold;
 }
 
 /* ===============================
@@ -1710,5 +1865,4 @@ hr.line.align-right {
        -o-transition-property:      -o-transform, opacity;
           transition-property:         transform, opacity;
 }
-
 
