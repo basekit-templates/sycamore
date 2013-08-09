@@ -85,7 +85,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "Open Sans",
+            "font-family": "Lato",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
@@ -93,7 +93,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "Open Sans",
+            "font-family": "Lato",
             "font-size": "14px",
             "font-weight": "400",
             "line-height": "28px",
