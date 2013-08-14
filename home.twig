@@ -2,6 +2,10 @@
 
 {% block content %}
 
+<section>
+        {{widget('feature', 'featurehome', {"header": "", "strapline":"", "buttonText":"Nullam Posuer","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
+</section>
+
 <header>
     <div class="wrapper clearfix">
         <div class="companyheader clearfix">
@@ -11,10 +15,6 @@
         {{widget('extendednavigation', 'navigationheader', {})|raw}}
     </div>
 </header>
-
-<section>
-    {{widget('feature', 'featurehome', {"header": "Welcome to Lift Module.", "strapline":"Aenean vitae mattis lacus. Nullam posuer. Phasellus convallis cuis elit ut pharetra.", "buttonText":"Find out more today →","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
-</section>
 
     <div class="main wrapper clearfix">
         {{zone('main')|raw}}
