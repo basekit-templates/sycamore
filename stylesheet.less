@@ -985,41 +985,22 @@ hr.line.align-right {
    CLICK TO CALL WIDGET
    =============================== */
 
-.widget.clicktocall {
-    padding: 10px 0;
-    margin: 20px 0;
-}
-
-
-.widget.clicktocall a
-{
-  margin: 1em 0;
-  padding: 17px 35px 17px 56px;
-  border: 0;
-  background-image: image('/images/ic-desktop-call-mob.png');
-  background-position: 25px center;
-  background-repeat: no-repeat;
-  font-family: @font-swatch2-font-family;
-  font-size: 1.2em;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch6-background-color;
-  color: @color-swatch1;
+.widget.clicktocall a {
+  
+  font-family: @font-swatch5-font-family;
+  font-weight:@font-swatch5-font-weight;
+  color: @font-swatch5-color;
+  letter-spacing: @font-swatch5-letter-spacing;
+  font-size: @font-swatch5-font-size;
   text-decoration: none;
-      -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
 }
 
-.widget.clicktocall a:hover 
-{
-  background-color: @font-swatch6-background-color-hover;
+.widget.clicktocall a:hover {
   cursor: pointer;
-    padding: 17px 35px 17px 56px;
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
-} 
+}
+
+
+/* CLICK TO CALL - JUSTIFY */
 
 .widget.clicktocall a.justifyleft
 {
@@ -1470,7 +1451,8 @@ hr.line.align-right {
     width: 32px;
     height: 32px;
     text-decoration: none;
-    text-indent: -9999px;
+    text-indent: 99999px;
+    white-space: nowrap;
 }
 
 .widget.profile .bk-profile-socialicons span a {
@@ -1832,60 +1814,46 @@ hr.line.align-right {
 
   /* CLICK TO CALL */
 
+  .widget.clicktocall {
+    padding: 10px 0px;
+  }
+
   .widget.clicktocall a {
-    background-image: image('/images/ic-desktop-call-mob.png');
-    background-color: @font-swatch7-background-color;
-    background-position: 15px;
+    background-image: image('/images/ic-call.png');
+    background-color: @color-swatch3;
+    background-position: 10px;
     background-repeat:no-repeat;
-    padding: 10px 17px 10px 38px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    padding: 10px 10px 10px 38px;
     border: 0;
-    margin: 20px 0;
+    margin: 2.2em auto;
     letter-spacing: 0;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
 
     font-family: @font-swatch2-font-family;
     font-size:1em;
     font-weight:@font-swatch7-font-weight;
     color: @color-swatch1;
     text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
   }
   
   .widget.clicktocall a:hover {
-    background-image: image('/images/ic-desktop-call-mob.png');
-    background-color: @font-swatch7-background-color-hover;
-    background-position: 15px;
+    background-image: image('/images/ic-call.png');
+    background-color: @color-swatch2;
+    background-position: 10px;
     color: @color-swatch1;
-    padding: 10px 17px 10px 38px;
+    padding: 10px 10px 10px 38px;
     cursor: pointer;
     text-decoration: none;
   }
 
-  .widget.clicktocall a.justifyleft {
-    text-align: left;
-  }
 
-  .widget.clicktocall a.justifycenter {
-    text-align: center;
-  }
-
-  .widget.clicktocall a.justifyright {
-    text-align: right;
-  }
-
-  .widget.clicktocall a.justifyfull {
-    text-align: justify;
-  }
-
-  .widget.clicktocall a.italic { 
-    font-style: italic;
-  }
-
-  .widget.clicktocall a.bold {
-    font-weight: bold;
-  }
-
-  .widget.clicktocall {
-    padding: 20px 0;
-    display:block;
+   .widget.responsiveslideshow .slideshow-image-list, 
+  .widget.responsiveslideshow .slideshow-widget {
+    height:300px;
   }
 
   /* GALLERY */
