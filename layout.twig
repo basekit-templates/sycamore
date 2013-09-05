@@ -39,12 +39,16 @@
 				menu.slideToggle();
 			});
 
-			$(window).bind('resize orientationchange', function() {
+            function menuToggle() {
         		var w = $(window).width();
+
         		if(w > 320 && menu.is(':hidden')) {
         			menu.removeAttr('style');
         		}
-    		});
+            }
+
+			$(window).resize(menuToggle);
+            $(window).orientationchange(menuToggle);
 		});
 	</script>
 
