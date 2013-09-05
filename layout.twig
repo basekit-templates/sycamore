@@ -47,8 +47,8 @@
         		}
             }
 
-			$(window).resize(menuToggle);
-            $(window).orientationchange(menuToggle);
+			$(window).bind('resize', menuToggle);
+            $(window).bind('orientationchange', menuToggle);
 		});
 	</script>
 
