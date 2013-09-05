@@ -39,7 +39,7 @@
 				menu.slideToggle();
 			});
 
-			$(window).resize(function(){
+			$(window).bind('resize orientationchange', function() {
         		var w = $(window).width();
         		if(w > 320 && menu.is(':hidden')) {
         			menu.removeAttr('style');
