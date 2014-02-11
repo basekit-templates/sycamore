@@ -24,8 +24,8 @@
             "color3":"#09d4b5",
             "color4":"#2f353e",
             "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color6":"#ffffff",
+            "color7":"#262723"
         },
         "Swatch 3": {
             "color1":"#ffffff",
@@ -33,8 +33,8 @@
             "color3":"#f3a41c",
             "color4":"#2f353e",
             "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color6":"#ffffff",
+            "color7":"#1f1f1f"
         },
         "Swatch 4": {
             "color1":"#ffffff",
@@ -42,8 +42,8 @@
             "color3":"#3b3b3b",
             "color4":"#2f353e",
             "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color6":"#ffffff",
+            "color7":"#1f1f1f"
         },
         "Swatch 5": {
             "color1":"#ffffff",
@@ -51,8 +51,8 @@
             "color3":"#9553d9",
             "color4":"#2f353e",
             "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color6":"#ffffff",
+            "color7":"#1f1f1f"
         }
     },
     "fontSwatch": {
