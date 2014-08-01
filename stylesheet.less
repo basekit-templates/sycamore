@@ -1451,7 +1451,7 @@ hr.line.align-right {
             margin-bottom: 10px;
           }
           label {
-            display: inline-block;
+            display: block;
             font-size: bkscale(@font-swatch5-font-size, 0.8);
             text-align: center;
             @media @mobile {
@@ -1518,6 +1518,13 @@ hr.line.align-right {
         text-align: center;
         clear: both;
       }
+    }
+        .productlist-search label {
+        margin: 0px 0px -21px -85px;
+
+        @media @mobile {
+            margin: 0px;
+        }
     }
   }
 }
