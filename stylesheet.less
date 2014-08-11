@@ -1724,11 +1724,13 @@ hr.line.align-right {
                 position: relative;
                 @media @tablet{
                     padding-right: 0;
+                    float: left;
                 }
                 @media @mobile {
                     width: auto;
                     padding-left: 0;
                     border-right: none;
+                    float: none;
                 }
                 // Name
                 .basket-summary-productname {
@@ -1751,7 +1753,7 @@ hr.line.align-right {
                     position: absolute;
                     right: 20px;
                     display: block;
-                    top: 20px;
+                    top: 0px;
                     height: 20px;
                     line-height: 30px;
                     text-align: center;
@@ -1763,6 +1765,7 @@ hr.line.align-right {
                     }
                     @media @mobile {
                         width: 130px;
+                        height: 50px;
                     }
                 }
                 // Quantity button
@@ -1771,17 +1774,17 @@ hr.line.align-right {
                     margin: 0;
                     position: absolute;
                     width: 150px;
-                    right: 20px;
-                    top: 50px;
                     height: 40px;
                     @media @tablet {
                         position: relative;
                         right: 0;
                         top: 0;
+                        float: right;
                     }
                     @media @mobile {
                         height: 30px;
                         width: 130px;
+                        float: none;
                     }
                     button {
                         font-family: @font-swatch5-font-family;
@@ -1844,7 +1847,7 @@ hr.line.align-right {
                     text-align: left;
                     position: absolute;
                     right: 0;
-                    bottom: 20px;
+                    bottom: 10px;
                 }
             }
         }
