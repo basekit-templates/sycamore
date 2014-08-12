@@ -142,7 +142,6 @@ footer.bk-footer .widget.profile .twitter span {
     color: @font-swatch5-color;
     text-indent: 8px;
     margin-top: 6px;
-    margin-bottom: 30px;
     padding: 0;
     float:left;
     border-radius: 0;
@@ -154,11 +153,11 @@ footer.bk-footer .widget.profile .twitter span {
     padding: 1px;
     margin-top: 6px;
     border: 1px solid darken(@color-swatch3,5%);
+    font-size: @font-swatch7-font-size;
     font-family: @font-swatch7-font-family;
-    font-size: 16px;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @font-swatch7-background-color;
     color: @font-swatch7-color;
+    line-height: @font-swatch7-line-height;
+    font-weight: @font-swatch7-font-weight;
     text-decoration: none;
     letter-spacing: 1px;
     text-shadow: none;
@@ -231,7 +230,6 @@ footer.bk-footer p {
   font-family: @font-swatch5-font-family;
   color: lighten(@color-swatch5,10%);
   line-height:@font-swatch5-line-height;
-  padding-bottom: 20px;
 }
 
 footer.bk-footer span {
@@ -245,7 +243,6 @@ footer.bk-footer span {
 .widget.extendednavigation {
   .clearfix;
   float: right;
-  position: relative;
   max-width: 691px;
   padding: 11px 0px 7px;
     @media (max-width: 960px) {
@@ -1594,28 +1591,18 @@ select::-ms-expand {
 
 @media only screen and (max-width: 768px) {
 
-  /* NAV */
+    /* NAV */
 
     .widget .extendednavigation a.pull {
-        top: 0;
-        margin-top: 24px
+        top: 24px;
     }
-
-    .widget.extendednavigation {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        float: none;
-    }
-
-    /* NAV */
 
     .widget .extendednavigation ul {
         width: 100%;
         display: none;
         border-top: 1px solid lighten(@color-swatch7,8%);
         padding: 20px 0;
-        margin: 14px 0 0;
+        margin: 60px 0 0;
     }
 
     .widget .extendednavigation ul li {
@@ -1636,13 +1623,13 @@ select::-ms-expand {
     }
 
     .widget .extendednavigation ul.align-right li.folder:after {
-    left: 5px;
-    right: inherit;
-}
+        left: 5px;
+        right: inherit;
+    }
 
-.widget.extendednavigation li:hover > ul > li > a {
-  padding-right:10px;
-}
+    .widget.extendednavigation li:hover > ul > li > a {
+        padding-right:10px;
+    }
 
     /* GALLERY */
 
@@ -1708,6 +1695,18 @@ select::-ms-expand {
   .widget.extendednavigation ul.align-right li.folder {
     background-position: 12px center;
     padding-right: 0;
+  }
+
+  .widget .extendednavigation ul {
+    margin: 10px 0 0;
+  }
+
+  .widget.extendednavigation {
+    float:none; 
+  }
+
+  .widget .extendednavigation a.pull {
+      top: 30px;
   }
 
   /* FEATURE */
