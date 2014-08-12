@@ -155,7 +155,7 @@ footer.bk-footer .widget.profile .twitter span {
     margin-top: 6px;
     border: 1px solid darken(@color-swatch3,5%);
     font-family: @font-swatch7-font-family;
-    font-size: bkscale(@font-swatch3-font-size, 0.7);
+    font-size: 16px;
     font-weight:@font-swatch7-font-weight;
     background-color: @font-swatch7-background-color;
     color: @font-swatch7-color;
@@ -175,23 +175,20 @@ footer.bk-footer .widget.profile .twitter span {
    =============================== */
 
 header.bk-header {
-  padding: 20px 0 20px 0;
+  padding: 0;
   background-color: @color-swatch7;
 }
 
 .companyheader {
   display: block;
   float: left;
-  padding: 11px 0px 7px;
-  max-width: 30%;
-  @media @tablet {
-    max-width: 80%;
-  }
+  padding: 11px 0px 7px
 }
 
 /* COMPANY NAME */
 
 .widget.companyname {
+  margin-top: 10px;
   a {
     font-size: @font-swatch10-font-size;
     @media @mobile {
@@ -249,7 +246,7 @@ footer.bk-footer span {
   .clearfix;
   float: right;
   position: relative;
-  max-width: 70%;
+  max-width: 691px;
     @media (max-width: 960px) {
       max-width: 100%;
     }
@@ -274,7 +271,7 @@ footer.bk-footer span {
 
 .widget.extendednavigation ul.align-right li, .widget.extendednavigation ul.align-right li:hover ul li
 {
-  background-color: transparent;
+  background-color: @color-swatch3;
   text-align: right;
 }
 
@@ -291,7 +288,7 @@ footer.bk-footer span {
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
   display: block;
-  padding: 7px 25px;
+  padding: 12px 25px;
   font-family:@font-swatch6-font-family;
   font-size:@font-swatch6-font-size;
   font-weight: @font-swatch6-font-weight;
@@ -346,7 +343,7 @@ footer.bk-footer span {
 .widget.extendednavigation li:hover > ul > li {
   display: block;
   width: 100%;
-  text-align: right;
+  text-align: left!important;
   padding: 0;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -534,19 +531,21 @@ footer.bk-footer span {
     padding: 0;
 }
 
+
 .widget.button button
 {
   margin: 1em 0;
+  padding: 17px 56px;
   border: 0;
   font-family: @font-swatch2-font-family;
-  font-size: bkscale(@font-swatch3-font-size, 0.7);
+  font-size: .9em;
   font-weight:@font-swatch7-font-weight;
   background-color: @font-swatch7-background-color;
   color: @font-swatch7-color;
   text-decoration: none;
 }
 
-.widget.button button:hover
+.widget.button button:hover 
 {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
@@ -554,30 +553,7 @@ footer.bk-footer span {
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
-}
-
-.widget.button,
-.widget.paypalbuynow,
-.widget.tweet,
-.widget.dropbox,
-.widget.clicktocall,
-.widget.paypalbuynow,
-.widget.button.paypal  {
-  margin: 0;
-}
-
-.widget.paypalbuynow .widget.button.paypal {
-  margin: 0;
-  font-size: bkscale(@font-swatch3-font-size, 0.7);
-}
-
-.widget.dropbox button {
-  font-size: bkscale(@font-swatch3-font-size, 0.7);
-}
-
-button.btn .facebook {
-  font-size: bkscale(@font-swatch3-font-size, 0.7);
-}
+} 
 
 /* ===============================
    CONTENT CSS
@@ -650,6 +626,131 @@ button.btn .facebook {
     font-weight: @font-swatch5-font-weight;
     font-size: @font-swatch5-font-size;
     line-height: @font-swatch5-line-height;
+}
+
+/* ===============================
+   GALLERY WIDGET
+   =============================== */
+
+
+.widget.gallery
+{
+}
+
+.widget.gallery ul {
+    display:block;
+    margin: 0;
+    padding:0px;
+    list-style: none;
+}
+
+.widget.gallery li {
+    float: left;
+    position: relative;
+    width: 33.3%;
+    padding-bottom: 33%;
+}
+
+.widget.gallery li  span.inner {
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-color: @color-swatch1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.widget.gallery ul li.one-to-one span.inner
+{
+    background-size:100% 100%;
+}
+
+.widget.gallery ul li.portrait span.inner
+{
+    background-size:100% auto;
+}
+
+.widget.gallery ul li.landscape span.inner
+{
+    background-size:auto 100%;
+}
+
+.widget.gallery li span.inner {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 0px;
+    bottom: 16px;
+    overflow: hidden;
+}
+
+.widget.gallery li span.inner img {
+    display:none;
+}
+
+.widget.gallery ul:before,
+.widget.gallery ul:after {
+  content: " ";
+  display: table;
+}
+.widget.gallery ul:after {
+  clear: both;
+}
+.widget.gallery ul {
+  *zoom: 1;
+}
+
+.widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: -310px;
+    max-height: 284px;
+    background:@color-swatch1;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color:@font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+.widget.gallery li span.inner:hover .title {
+   margin-bottom: 0;
+}
+
+.widget.gallery li span.inner .description {
+  display: none;
+}
+
+.widget.gallery li span.inner a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Lightbox */
+
+.lb-data .lb-caption, .lb-data .lb-number {
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight: @font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:lighten(@font-swatch5-color,50%);
+}
+
+.lb-data .lb-number {
+  font-size:bkscale(@font-swatch5-font-size,0.9);
 }
 
 
@@ -752,12 +853,6 @@ hr.line.align-right {
     font-size: .6em;
     color: @font-swatch5-color;
     padding-bottom: 30px;
-
-    a {
-      font-family: @font-swatch5-font-family;
-      font-size: 16px;
-      color: @font-swatch5-color;
-    }
 }
 
 .widget.twitter ul li:last-child {
@@ -788,7 +883,6 @@ hr.line.align-right {
 
 .widget.tweet a {
     -webkit-font-smoothing: initial;
-    font-size: bkscale(@font-swatch3-font-size, 0.7);
 }
 
 
@@ -815,9 +909,6 @@ hr.line.align-right {
   padding: 0;
   border: 0;
   margin: 0;
-  button {
-    font-size: bkscale(@font-swatch3-font-size, 0.7);
-  }
 }
 
 .widget.signupform label {
@@ -926,15 +1017,16 @@ hr.line.align-right {
 }
 
 .widget.contactform fieldset button.btn {
+  padding: 17px 56px;
   border: 0;
   font-family: @font-swatch2-font-family;
-  font-size: bkscale(@font-swatch3-font-size, 0.7);
+  font-size: .9em;
   font-weight:@font-swatch7-font-weight;
   background-color: @font-swatch7-background-color;
   color: @font-swatch7-color;
   text-decoration: none;
 }
-
+  
 .widget.contactform fieldset button.btn:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
@@ -1098,7 +1190,6 @@ hr.line.align-right {
     }
     .content-wrapper {
         background: rgba(0,0,0,0.5);
-        padding: 10px 0 10px 0;
     }
     .slideshow-widget {
         /* Arrows */
@@ -1215,9 +1306,8 @@ hr.line.align-right {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            max-height: 250px;
             height: 250px;
-            width: 100%;
+            width: 250px;
             margin-bottom: 20px;
             img {
                 display: none;
@@ -1288,7 +1378,7 @@ hr.line.align-right {
         button {
             background-color: @font-swatch7-background-color;
             font-family: @font-swatch7-font-family;
-            font-size: bkscale(@font-swatch3-font-size, 0.7);
+            font-size: @font-swatch7-font-size;
             font-weight: @font-swatch7-font-weight;
             line-height: @font-swatch7-line-height;
             color: @font-swatch7-color;
@@ -1310,578 +1400,42 @@ hr.line.align-right {
    MENU
    =============================== */
 
-// Menu Sections
-.widget.menusections {
-    margin: 0 0 30px;
-    ul {
-        padding: 1em!important;
-        text-align: center;
-        li {
-            @media @mobile {
-                width: 100%;
-                margin: 0;
-            }
+.menu {
+    .menu-item-image-wrap {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 180px;
+        margin: 0.25em 0 0.75em;
+        background-position: center;
+        @media @mobile {
+           margin: 1em 0 0.5em;
+        }
+        img {
+           display: none;
         }
     }
-    a {
-        color: @color-swatch4;
-        &:hover {
-            color: @color-swatch3;
-            text-decoration: none;
+    .menu-items {
+        .menu-item {
+            padding: 30px;
+            border: 1px solid darken(@color-swatch1,10%);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px; 
+            border-radius: 4px;
+            margin-bottom: 30px;
         }
-    }
-}
-
-// Main Menu
-.widget.menu {
-    .main.wrapper {
-        width: 100%;
-        margin: 0 0 2em;
-        border-bottom: 1px solid @color-swatch2;
-        padding-bottom: 30px;
-    }
-    .menu-header {
-        margin-bottom: 30px;
-    }
-    .menu-name,
-    .menu-description,
-    .menu-note,
-    .menu-subsection-name,
-    .menu-subsection-description {
-        text-align: center;
-        padding-bottom: 0;
-        font-size: @font-swatch2-font-size;
     }
     .menu-subsection {
-        padding: 0;
-    }
-    .menu-item-image-wrap {
-        background-image: none!important;
-        img {
-            max-height: 180px;
-        }
-    }
-}
-
-// Promoted Item
-.widget.menusections ul {
-    padding: 2em;
-    border-top: 1px solid @color-swatch2;
-    border-bottom: 1px solid @color-swatch2;
-}
-
-.menu .menu-items li.menu-item-promoted,
-.menu-subsection-promoted {
-    padding: 2em;
-    border-bottom: 1px solid darken(@color-swatch3, 20%);
-    border-top: 1px solid darken(@color-swatch3, 20%);
-    background-color: lighten(@color-swatch3, 40%);
-}
-
-// Nutritional Info
-.menu-item-nutritional-title {
-    font-size: bkscale(@font-swatch5-font-size,0.8);
-    letter-spacing: @font-swatch7-letter-spacing;
-    text-transform: uppercase;
-}
-.menu-item-nutritional-prop {
-    font-size: bkscale(@font-swatch5-font-size,0.8);
-    line-height: bkscale(@font-swatch5-line-height,0.8);
-    margin-bottom: 10px;
-}
-
-// Price
-.standard-price {
-    color: @font-swatch4-color;
-    font-family: @font-swatch4-font-family;
-    font-size: @font-swatch4-font-size;
-    font-weight: @font-swatch4-font-weight;
-    line-height: @font-swatch4-line-height;
-    letter-spacing: @font-swatch4-letter-spacing;
-}
-
-// Dietary Icons
-.menu .menu-section-item-dietary-props .dietary-icon {
-    text-transform: uppercase;
-    padding: 1px 6px;
-    background-color: @color-swatch1;
-    border: 2px solid @color-swatch3;
-    color: @color-swatch3;
-    font-family: @font-swatch7-font-family;
-    font-size: 11px;
-    font-weight: @font-swatch7-font-weight;
-    line-height: @font-swatch7-line-height;
-    letter-spacing: @font-swatch7-letter-spacing;
-}
-
-/* =======================================
-   ECOMMERCE
-   ==================================== */
-
-   .widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
-        background-position: 0 3000%;
-   }
-
-   .ecom-product-variation select,
-   .widget.ecomcheckout .delivery select {
-
-        -moz-appearance: none;
-        text-indent: 0.01px;
-        text-overflow: '';
-        cursor: pointer;
-        position: relative;
-        background-repeat: no-repeat;
-        background-position: right center;
-        margin: 0;
-        color: @color-swatch5;
-        position: relative;
-        display: inline-block;
-        font-family: @font-swatch7-font-family;
-        font-size: @font-swatch7-font-size;
-        font-weight: @font-swatch7-font-weight;
-        line-height: 1;
-        border-radius: 0;
-        webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        border: 1px solid @color-swatch5;
-        background-color: @color-swatch1;
-        padding: 8px 38px 8px 14px;
-        text-indent: 0;
-        letter-spacing: 0;
-        float: none;
-        height: 41px;
-        background-image: image('/images/ui-select-arrow.png');
-
-        @media @mobile {
-          display: block;
-          width: 100%;
-        }
-    }
-
-   .widget.ecomproductslist {
-  .ecom-productslist-products {
-    // Filter
-    .productlist-filter {
-      .productlist-display-form {
-        .clearfix;
-        margin-bottom: 1em;
-        text-align: center;
-        .form-group {
-          margin-right: 0.5em;
-          margin-left: 0.5em;
-          display: inline-block;
-          vertical-align: center;
-          @media @mobile {
-            display: block;
-            margin-bottom: 10px;
-          }
-          label {
-            display: block;
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-            text-align: center;
-            @media @mobile {
-              text-align: left;
-            }
-          }
-          select {
-            -moz-appearance: none;
-            text-indent: 0.01px;
-            -webkit-appearance: none;
-            text-overflow: '';
-            cursor: pointer;
-            position: relative;
-            background-repeat: no-repeat;
-            background-position: right center;
-            margin: 0;
-            color: @color-swatch5;
-            position: relative;
-            display: inline-block;
-            font-family: @font-swatch7-font-family;
-            font-size: @font-swatch7-font-size;
-            font-weight: @font-swatch7-font-weight;
-            line-height: 1;
-            border-radius: 0;
-            webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            border: 1px solid @color-swatch5;
+        padding: 30px;
+        background-color: darken(@color-swatch1,5%);
+        border: 1px solid darken(@color-swatch1,10%);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px; 
+        border-radius: 4px;
+        .menu-item { 
             background-color: @color-swatch1;
-            padding: 8px 38px 8px 14px;
-            text-indent: 0;
-            letter-spacing: 0;
-            float: none;
-            height: 41px;
-            background-image: image('/images/ui-select-arrow.png');
-
-            @media @mobile {
-              display: block;
-              width: 100%;
-            }
-          }
-
-          button {
-            font-family: @font-swatch7-font-family;
-            font-weight:@font-swatch7-font-weight;
-            line-height: @font-swatch7-line-height;
-            letter-spacing: @font-swatch7-letter-spacing;
-            background-color: @font-swatch7-background-color;
-            color: @font-swatch7-color;
-            font-size: bkscale(@font-swatch3-font-size, 0.7);
-            padding: 6px 16px 5px 16px;
-            margin: 1em 0;
-            border: none;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-            text-decoration: none;
-            text-shadow: 0 1px 0px rgba(0,0,0,0.2);
-          }
-
         }
-      }
-      .productlist-item-count {
-        text-align: center;
-        clear: both;
-      }
-    }
-        .productlist-search label {
-        margin: 0px 0px -21px -85px;
-
-        @media @mobile {
-            margin: 0px;
-        }
-    }
-  }
-}
-
-.svg {
-  .widget.ecomproductslist .ecom-productslist-products .productlist-filter .productlist-display-form .form-group select {
-    background-image: image('/images/ui-select-arrow.svg');
-    background-repeat: no-repeat;
-    background-size: 15px;
-    background-position-x: 93%;
-    background-position-y: 55%;
-    font-size:bkscale(@font-swatch5-font-size,0.8);
-  }
-}
-
-    /*  Basket Icon  */
-
-    .widget.ecombasket {
-        margin-bottom: 2em;
-    }
-
-    /*  Order Button  */
-
-    .widget.ecomcheckout {
-
-        .checkout-order-button {
-            margin: 20px 0 20px 0;
-            font-family: @font-swatch7-font-family;
-            font-weight:@font-swatch7-font-weight;
-            line-height: @font-swatch7-line-height;
-            letter-spacing: @font-swatch7-letter-spacing;
-            background-color: @font-swatch7-background-color;
-            color: @font-swatch7-color;
-            font-size: bkscale(@font-swatch3-font-size, 0.7);
-            padding: 10px 16px;
-            margin: 1em 0;
-            border: none;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-            text-decoration: none;
-            text-shadow: 0 1px 0px rgba(0,0,0,0.2);
-        }
-
-        .delivery-price {
-            line-height: 50px;
-        }
-
-}
-
-.widget.ecomproduct .ecom-product .btn {
-    font-family: @font-swatch7-font-family;
-    font-weight:@font-swatch7-font-weight;
-    line-height: @font-swatch7-line-height;
-    letter-spacing: @font-swatch7-letter-spacing;
-    background-color: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    font-size: bkscale(@font-swatch3-font-size, 0.7);
-    padding: 10px 16px;
-    margin: 1em 0;
-    border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    text-decoration: none;
-    text-shadow: 0 1px 0px rgba(0,0,0,0.2);
-}
-
-// Basket Summary
-
-
-.widget.ecombasketsummary {
-    // Title
-    .basket-summary-title {
-        border-bottom: 2px solid darken(@color-swatch1,10%);
-    }
-
-    // Empty basket
-    .basket-summary-empty-copy {
-        margin: 2em 0;
-    }
-
-    // Checkout Items
-    table.basket-summary-items-table {
-        margin-bottom: 30px;
-        border-spacing: 0;
-        width: 100%;
-
-
-        tr {
-            @media @mobile {
-                display: block;
-            }
-            td, th {
-                padding: 20px 0;
-                border-bottom: none;
-                @media @mobile {
-                    display: block;
-                    padding: 10px 0 0 0;
-                }
-            }
-            td {
-
-            }
-            th {
-
-            }
-        }
-
-        // Table Head
-        tbody tr:first-child {
-            @media @mobile {
-                display: none;
-            }
-            th {
-                border-bottom: 1px solid darken(@color-swatch1,10%);
-                &:nth-child(2) {
-                    border-right: 0px darken(@color-swatch1,10%);
-                }
-
-            }
-        }
-        // Item
-        tr.basket-summary-items {
-            @media @mobile {
-                position: relative;
-                border-top: 1px darken(@color-swatch1,10%);
-                padding: 0 0 10px 0;
-                margin: 0 0 10px 0;
-
-            }
-
-            td {
-                border-bottom: 1px darken(@color-swatch1,10%);
-                @media @mobile {
-                    border-bottom: none;
-                }
-            }
-            // Image
-            td:nth-child(1) {
-                @media @mobile {
-                    width: auto;
-                }
-                .image-wrap {
-                    width: 100%;
-                    height: 0;
-                    padding-bottom: 100%;
-                    float: none;
-                    background-size: cover;
-                    background-position: center;
-                    @media @mobile {
-                        padding-bottom: 0;
-                        height: auto;
-                        background-position: -1000px;
-                    }
-                    img {
-                        display: none;
-                        @media @mobile {
-                            display: block;
-                            width: 60%;
-                            height: auto;
-                        }
-                    }
-                }
-            }
-            // Product info
-            td:nth-child(2) {
-                padding-left: 1em;
-                padding-right: 170px;
-                vertical-align: top;
-                position: relative;
-                @media @tablet{
-                    padding-right: 0;
-                    float: left;
-                }
-                @media @mobile {
-                    width: auto;
-                    padding-left: 0;
-                    border-right: none;
-                    float: none;
-                }
-                // Name
-                .basket-summary-productname {
-                    font-size: @font-swatch4-font-size;
-                    display: block;
-                    @media @mobile {
-                        font-size: bkscale(@font-swatch4-font-size, 0.8);
-                    }
-                }
-                // Price
-                .basket-summary-pricepu {
-                    font-size: @font-swatch4-font-size;
-                    @media @mobile {
-                        font-size: bkscale(@font-swatch4-font-size, 0.8);
-                    }
-                }
-                // Quantity label
-                .basket-summary-quantity {
-                    width: 150px;
-                    position: absolute;
-                    right: 20px;
-                    display: block;
-                    top: 0px;
-                    height: 20px;
-                    line-height: 30px;
-                    text-align: center;
-                    font-size: bkscale(@font-swatch5-font-size, 0.8);
-                    @media @tablet {
-                        position: relative;
-                        right: 0;
-                        top: 0;
-                    }
-                    @media @mobile {
-                        width: 130px;
-                        height: 50px;
-                    }
-                }
-                // Quantity button
-                .basket-summary-quantitybtn {
-                    background-color: transparent;
-                    margin: 0;
-                    position: absolute;
-                    width: 150px;
-                    height: 40px;
-                    @media @tablet {
-                        position: relative;
-                        right: 0;
-                        top: 0;
-                        float: right;
-                    }
-                    @media @mobile {
-                        height: 30px;
-                        width: 130px;
-                        float: none;
-                    }
-                    button {
-                        font-family: @font-swatch5-font-family;
-                        font-weight: 700;
-                        font-size: 16px;
-                        line-height: 40px;
-                        border: none;
-                        cursor: pointer;
-                        padding: 0;
-                        color: @color-swatch1;
-                        background-color: @color-swatch3;
-                        position: absolute;
-                        top: 0;
-                        width: 40px;
-                        height: 40px;
-
-
-                        @media @mobile {
-                            width: 30px;
-                            height: 30px;
-                            line-height: 30px;
-                        }
-
-                        &:hover {
-                            background-color: darken(@color-swatch3, 10%);
-                        }
-
-                        &.js-remove {
-                            left: 0;
-                        }
-                        &.js-add {
-                            right: 0;
-                        }
-                    }
-                    // Count
-                    span {
-                        background-color: darken(@color-swatch1, 6%);
-                        color: invert(@color-swatch2);
-                        height: 40px;
-                        line-height: 40px;
-                        position: absolute;
-                        left: 40px;
-                        right: 40px;
-                        text-align: center;
-                        top: 0;
-                        display: block;
-                        width: 70px;
-                        @media @mobile {
-                            height: 30px;
-                            line-height: 30px;
-                            left: 30px;
-                            right: 30px;
-                        }
-                    }
-                }
-            }
-            td.basket-summary-amount {
-                text-align: right;
-                @media @mobile {
-                    text-align: left;
-                    position: absolute;
-                    right: 0;
-                    bottom: 10px;
-                }
-            }
-        }
-
-        // Sub Total
-        tbody tr:last-child {
-            td {
-                font-size: @font-swatch4-font-size;
-                border-top: 1px solid darken(@color-swatch1,10%);
-                border-bottom: 2px solid darken(@color-swatch1,10%);
-                @media @mobile {
-                    text-align: left;
-                    border-top: 0;
-                    border-bottom: 0;
-                    font-size: bkscale(@font-swatch4-font-size, 0.9);
-                }
-                &.basket-summary-subtotal {
-                    text-align: right;
-                    @media @mobile {
-                        border-top: 2px solid darken(@color-swatch1,10%);
-                        border-bottom: 2px solid darken(@color-swatch1,10%);
-                    }
-                }
-            }
-        }
-    }
-
-    // Ts & Cs
-    .basket-summary-legal-links {
-        margin-top: 2em;
-        list-style-type: none;
     }
 }
-
 
 
 /* ===============================
@@ -1920,12 +1474,8 @@ hr.line.align-right {
         border-bottom: 0;
     }
 
-    .widget.extendednavigation ul li.folder {
-      padding-right: 20px;
-    }
-
     .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-      padding: 6px 10px;
+      padding: 10px;
     }
 
     .widget.extendednavigation ul li:hover > ul {
