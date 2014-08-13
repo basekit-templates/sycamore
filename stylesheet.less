@@ -1342,7 +1342,7 @@ select {
     background-position: right 6% center;
     background-repeat: no-repeat;
     border: 0;
-    background-position-x: 95%;
+    background-position-x: 97%;
     background-position-y: 53%;
     background-color: darken(@color-swatch1,5%);
     border: 1px solid darken(@color-swatch1,10%);
@@ -1363,12 +1363,12 @@ select::-ms-expand {
     text-align:center;
   }
 
-  .widget.ecomproductslist label {
-    display:block;
-  }
-
   .ecom-productslist-title {
     padding:0;
+  }
+
+  .widget.ecomproductslist label {
+    display:block;
   }
 
 // Ecom Basket Summary
@@ -1601,6 +1601,15 @@ select::-ms-expand {
     }
 }
 
+.btn.ecom-product-go-to-checkout-btn {
+  background-color:@color-swatch3;
+  padding: 12px 10px;
+  &:hover {
+    background-color:darken(@color-swatch3,20%);
+    text-decoration: none;
+  }
+}
+
 /* ===============================
    IPAD WIDTH
    =============================== */
@@ -1611,6 +1620,14 @@ select::-ms-expand {
 
     .widget .extendednavigation a.pull {
         top: 28px;
+    }
+
+    .widget.extendednavigation {
+      width:100%;
+    }
+
+    .companyheader {
+      width:90%;
     }
 
     .widget.extendednavigation .bk-overlay {
