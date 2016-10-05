@@ -1,7 +1,7 @@
 {
     "name":"Sycamore",
     "thumbnail":"sycamore.png",
-    "screenshot":"sycamore.png",
+    "screenshot":"sycamore-screenshot.jpg",
     "templateType":"standard",
     "pageTypes":["home"],
     "tags": {
