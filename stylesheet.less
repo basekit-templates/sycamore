@@ -826,7 +826,8 @@ hr.line.align-right {
    CONTACT FORM WIDGET
    =============================== */
 
-.widget.contactform form {
+.widget.contactform form,
+.advancedcontactform form {
     display: block;
     padding: 30px;
     margin: 0 0 20px;
@@ -837,12 +838,14 @@ hr.line.align-right {
     border-radius: 4px;
 }
 
-.widget.contactform fieldset {
+.widget.contactform fieldset,
+.advancedcontactform fieldset {
     border: none;
     padding: 0;
 }
 
-.widget.contactform fieldset label {
+.widget.contactform fieldset label,
+.advancedcontactform fieldset label {
     width: 100%;
     float: left;
     font-family:@font-swatch4-font-family;
@@ -853,7 +856,8 @@ hr.line.align-right {
     letter-spacing: @font-swatch4-letter-spacing;
 }
 
-.widget.contactform fieldset input {
+.widget.contactform fieldset input,
+.advancedcontactform fieldset input {
     height: 50px;
     width: 100%;
     background-color: darken(@color-swatch1,5%);
@@ -870,7 +874,8 @@ hr.line.align-right {
     padding: 0;
 }
 
-.widget.contactform fieldset textarea {
+.widget.contactform fieldset textarea,
+.advancedcontactform fieldset textarea {
     height: 132px;
     width: 100%;
     background-color: darken(@color-swatch1,5%);
@@ -889,7 +894,10 @@ hr.line.align-right {
     padding: 0;
 }
 
-.widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
+.widget.contactform fieldset input:focus,
+.widget.contactform fieldset textarea:focus,
+.advancedcontactform fieldset textarea:focus,
+.advancedcontactform fieldset input:focus {
   outline: none;
 }
 
@@ -910,7 +918,8 @@ hr.line.align-right {
     color:    @color-swatch5;
 }
 
-.widget.contactform fieldset button.btn {
+.widget.contactform fieldset button.btn,
+.advancedcontactform fieldset button {
   padding: 17px 56px;
   border: 0;
   font-family:@font-swatch7-font-family;
@@ -922,7 +931,8 @@ hr.line.align-right {
   text-decoration: none;
 }
 
-.widget.contactform fieldset button.btn:hover {
+.widget.contactform fieldset button.btn:hover,
+.advancedcontactform fieldset button:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -932,7 +942,7 @@ hr.line.align-right {
 }
 
 input, textarea {
-      background-color: darken(@color-swatch1,5%);
+    background-color: darken(@color-swatch1,5%);
     border: 1px solid darken(@color-swatch1,10%);
 }
 
