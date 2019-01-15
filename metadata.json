@@ -144,5 +144,12 @@
             "color": "@color-swatch6",
             "letter-spacing": "inherit"
         }
+    },
+    "styles": {
+        "colors": {
+            "color--light": "@color-swatch1",
+            "color--accent": "@color-swatch3",
+            "color--dark": "@color-swatch4"  
+        }
     }
 }

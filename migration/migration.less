@@ -1,0 +1,63 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+// Site Layout and Spacing
+// -----------------------------
+
+@site-container: 960px;
+@site-margin: auto;
+
+// Contain content
+#page-zones__main > .widget:not(.row),  // Zone widgets
+.bk-header .wrapper,                    // Header
+.bk-footer .wrapper,                    // Footer
+.feature .wrapper{                      // Feature
+    margin-left: @site-margin;
+    margin-right: @site-margin;
+    max-width: @site-container;
+}
+.bk-header .wrapper,
+.bk-footer .wrapper {
+    width: 90%;
+}
+.wrapper {
+    width: inherit;
+    margin: inherit;
+}
+
+
+#page-zones__main > .widget:not(.row) {  // Contains zone widgets outside rows
+    width: 90%;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+// Widget spacing
+#page-zones__main > .widget:not(.row):first-child,  // First zone widget
+#page-zones__main > .row + .widget:not(.row) {      // Zone widget after row
+    margin-top: 50px;
+    
+    @media @tablet {
+        margin-top: 5%;
+    }
+}
+
+// Main override
+.main,
+.bk-pt-default .main {
+    padding: 0;
+}
+
+// Row container width
+.row .row--width-contained .row__container {
+    max-width: @site-container;
+}
+
+// Feature
+.widget.feature {
+    margin-bottom: 0;
+}
+
+
