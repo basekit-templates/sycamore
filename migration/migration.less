@@ -17,6 +17,7 @@
     margin-left: @site-margin;
     margin-right: @site-margin;
     max-width: @site-container;
+    width: 90%;
 }
 .bk-header .wrapper,
 .bk-footer .wrapper {
@@ -31,9 +32,12 @@
 // Move spacing to first widget in the main zone (not sections)
 .edit #page-zones__main-overlay + .widget:not(.row),
 #page-zones__main > .widget:not(.row):first-child {
-    margin-top: 50px;
+    margin-top: 40px;
     
     @media @tablet {
+        margin-top: 30px;
+    }
+    @media @mobile {
         margin-top: 20px;
     }
 }
@@ -41,9 +45,12 @@
 
 // Move spacing to last widget in the main zone (not sections)
 #page-zones__main > .widget:not(.row):last-child {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     
     @media @tablet {
+        margin-bottom: 30px;
+    }
+    @media @mobile {
         margin-bottom: 20px;
     }
 }
