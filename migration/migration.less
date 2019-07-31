@@ -1,0 +1,90 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+// Stylseheet overrides
+// -----------------------------
+
+
+.widget.content {
+    overflow: inherit;
+}
+
+
+
+
+// Site Layout and Spacing
+// -----------------------------
+
+@site-container: 960px;
+@site-margin: auto;
+
+// Contain content
+#page-zones__main > .widget:not(.row),  // Zone widgets
+.bk-header .wrapper,                    // Header
+.bk-footer .wrapper,                    // Footer
+.feature .wrapper{                      // Feature
+    margin-left: @site-margin;
+    margin-right: @site-margin;
+    max-width: @site-container;
+    width: 90%;
+}
+.bk-header .wrapper,
+.bk-footer .wrapper {
+    width: 90%;
+}
+.wrapper {
+    width: inherit;
+    margin: inherit;
+}
+
+
+// Move spacing to first widget in the main zone (not sections)
+.edit #page-zones__main-overlay + .widget:not(.row),
+#page-zones__main > .widget:not(.row):first-child {
+    margin-top: 40px;
+    
+    @media @tablet {
+        margin-top: 30px;
+    }
+    @media @mobile {
+        margin-top: 20px;
+    }
+}
+
+
+// Move spacing to last widget in the main zone (not sections)
+#page-zones__main > .widget:not(.row):last-child {
+    margin-bottom: 40px;
+    
+    @media @tablet {
+        margin-bottom: 30px;
+    }
+    @media @mobile {
+        margin-bottom: 20px;
+    }
+}
+
+// Main override
+.main,
+.bk-pt-default .main {
+    padding: 0;
+}
+
+// Row container width
+.row .row--width-contained .row__container {
+    max-width: @site-container;
+}
+
+// Feature
+.widget.feature {
+    margin-bottom: 0;
+}
+
+
+}
+
